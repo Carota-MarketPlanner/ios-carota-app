@@ -47,6 +47,7 @@
 		C740B060CE38BD43AE081A35 /* Pods_Carota_CarotaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carota_CarotaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3035D1AE779F84B82FCBBE /* Pods-CarotaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarotaTests.debug.xcconfig"; path = "Target Support Files/Pods-CarotaTests/Pods-CarotaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DEE982892C87A77400BC0596 /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
+		DEE9828B2C87CA1600BC0596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DEEA04FF2C854C410055BBE1 /* Carota.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carota.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEEA05022C854C410055BBE1 /* CarotaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarotaApp.swift; sourceTree = "<group>"; };
 		DEEA05042C854C410055BBE1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -185,6 +186,7 @@
 		DEEA05012C854C410055BBE1 /* Carota */ = {
 			isa = PBXGroup;
 			children = (
+				DEE9828B2C87CA1600BC0596 /* Info.plist */,
 				DE456D312C857E4C000DE6FC /* App */,
 				DE456D302C857E40000DE6FC /* Resources */,
 				DE456D322C857E6A000DE6FC /* Screens */,
@@ -627,9 +629,9 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Carota/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -658,9 +660,9 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Carota/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

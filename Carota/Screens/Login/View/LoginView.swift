@@ -14,6 +14,8 @@ struct LoginView: View {
     @State var email: String = LoginConstants.empty
     @State var password: String = LoginConstants.empty
     
+    // MARK: - Views
+    
     var body: some View {
         VStack(spacing: LoginConstants.bodySpace) {
             Image(LoginConstants.Image.logoSignColor)
@@ -30,7 +32,6 @@ struct LoginView: View {
         }
     }
     
-    // MARK: - Views
     private var formStack: some View {
         VStack(spacing: LoginConstants.formStackSpacing) {
             titleStack
