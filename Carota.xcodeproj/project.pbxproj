@@ -10,6 +10,7 @@
 		05EB7690A2FCA5387191E9AA /* Pods_CarotaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F03584DBBD48CA656F3B1003 /* Pods_CarotaTests.framework */; };
 		1558EBB1529158DA500DB76F /* Pods_Carota_CarotaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C740B060CE38BD43AE081A35 /* Pods_Carota_CarotaUITests.framework */; };
 		B20740BC9DC5116FF3252930 /* Pods_Carota.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6948E8DE836FD00FD585F5 /* Pods_Carota.framework */; };
+		DEE9828A2C87A77400BC0596 /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE982892C87A77400BC0596 /* LoginConstants.swift */; };
 		DEEA05032C854C410055BBE1 /* CarotaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEA05022C854C410055BBE1 /* CarotaApp.swift */; };
 		DEEA05052C854C410055BBE1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEA05042C854C410055BBE1 /* LoginView.swift */; };
 		DEEA05072C854C420055BBE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEEA05062C854C420055BBE1 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		A33A55659E2CE652878E589F /* Pods-Carota.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carota.release.xcconfig"; path = "Target Support Files/Pods-Carota/Pods-Carota.release.xcconfig"; sourceTree = "<group>"; };
 		C740B060CE38BD43AE081A35 /* Pods_Carota_CarotaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carota_CarotaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3035D1AE779F84B82FCBBE /* Pods-CarotaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarotaTests.debug.xcconfig"; path = "Target Support Files/Pods-CarotaTests/Pods-CarotaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DEE982892C87A77400BC0596 /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
 		DEEA04FF2C854C410055BBE1 /* Carota.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carota.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEEA05022C854C410055BBE1 /* CarotaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarotaApp.swift; sourceTree = "<group>"; };
 		DEEA05042C854C410055BBE1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -136,9 +138,26 @@
 		DE456D332C857E81000DE6FC /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				DEEA05042C854C410055BBE1 /* LoginView.swift */,
+				DEE982882C87A76300BC0596 /* Constants */,
+				DEE982872C87A75400BC0596 /* View */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		DEE982872C87A75400BC0596 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEEA05042C854C410055BBE1 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEE982882C87A76300BC0596 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DEE982892C87A77400BC0596 /* LoginConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		DEEA04F62C854C410055BBE1 = {
@@ -438,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEEA05052C854C410055BBE1 /* LoginView.swift in Sources */,
+				DEE9828A2C87A77400BC0596 /* LoginConstants.swift in Sources */,
 				DEEA05032C854C410055BBE1 /* CarotaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,8 +630,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -641,8 +661,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
