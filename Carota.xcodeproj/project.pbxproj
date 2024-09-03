@@ -10,7 +10,8 @@
 		05EB7690A2FCA5387191E9AA /* Pods_CarotaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F03584DBBD48CA656F3B1003 /* Pods_CarotaTests.framework */; };
 		1558EBB1529158DA500DB76F /* Pods_Carota_CarotaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C740B060CE38BD43AE081A35 /* Pods_Carota_CarotaUITests.framework */; };
 		B20740BC9DC5116FF3252930 /* Pods_Carota.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6948E8DE836FD00FD585F5 /* Pods_Carota.framework */; };
-		DEE9828A2C87A77400BC0596 /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE982892C87A77400BC0596 /* LoginConstants.swift */; };
+		DEE9828A2C87A77400BC0596 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE982892C87A77400BC0596 /* Constants.swift */; };
+		DEE9828F2C87CBC800BC0596 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE9828E2C87CBC800BC0596 /* SigninView.swift */; };
 		DEEA05032C854C410055BBE1 /* CarotaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEA05022C854C410055BBE1 /* CarotaApp.swift */; };
 		DEEA05052C854C410055BBE1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEA05042C854C410055BBE1 /* LoginView.swift */; };
 		DEEA05072C854C420055BBE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEEA05062C854C420055BBE1 /* Assets.xcassets */; };
@@ -46,8 +47,9 @@
 		A33A55659E2CE652878E589F /* Pods-Carota.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carota.release.xcconfig"; path = "Target Support Files/Pods-Carota/Pods-Carota.release.xcconfig"; sourceTree = "<group>"; };
 		C740B060CE38BD43AE081A35 /* Pods_Carota_CarotaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carota_CarotaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3035D1AE779F84B82FCBBE /* Pods-CarotaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarotaTests.debug.xcconfig"; path = "Target Support Files/Pods-CarotaTests/Pods-CarotaTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DEE982892C87A77400BC0596 /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
+		DEE982892C87A77400BC0596 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DEE9828B2C87CA1600BC0596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DEE9828E2C87CBC800BC0596 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
 		DEEA04FF2C854C410055BBE1 /* Carota.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carota.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEEA05022C854C410055BBE1 /* CarotaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarotaApp.swift; sourceTree = "<group>"; };
 		DEEA05042C854C410055BBE1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		DE456D322C857E6A000DE6FC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				DEE9828C2C87CB6000BC0596 /* Signin */,
 				DE456D332C857E81000DE6FC /* Login */,
 			);
 			path = Screens;
@@ -156,7 +159,30 @@
 		DEE982882C87A76300BC0596 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				DEE982892C87A77400BC0596 /* LoginConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		DEE9828C2C87CB6000BC0596 /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				DEE9828D2C87CBB800BC0596 /* View */,
+			);
+			path = Signin;
+			sourceTree = "<group>";
+		};
+		DEE9828D2C87CBB800BC0596 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEE9828E2C87CBC800BC0596 /* SigninView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEE982902C87CF6100BC0596 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DEE982892C87A77400BC0596 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -188,6 +214,7 @@
 			children = (
 				DEE9828B2C87CA1600BC0596 /* Info.plist */,
 				DE456D312C857E4C000DE6FC /* App */,
+				DEE982902C87CF6100BC0596 /* Constants */,
 				DE456D302C857E40000DE6FC /* Resources */,
 				DE456D322C857E6A000DE6FC /* Screens */,
 				DEEA05082C854C420055BBE1 /* Preview Content */,
@@ -459,7 +486,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEEA05052C854C410055BBE1 /* LoginView.swift in Sources */,
-				DEE9828A2C87A77400BC0596 /* LoginConstants.swift in Sources */,
+				DEE9828A2C87A77400BC0596 /* Constants.swift in Sources */,
+				DEE9828F2C87CBC800BC0596 /* SigninView.swift in Sources */,
 				DEEA05032C854C410055BBE1 /* CarotaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

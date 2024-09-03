@@ -11,16 +11,16 @@ import CDSComponents
 struct LoginView: View {
     @CDSThemeCore var theme: CDSTheme
     
-    @State var email: String = LoginConstants.empty
-    @State var password: String = LoginConstants.empty
+    @State var email: String = Constants.empty
+    @State var password: String = Constants.empty
     
     // MARK: - Views
     
     var body: some View {
-        VStack(spacing: LoginConstants.bodySpace) {
-            Image(LoginConstants.Image.logoSignColor)
+        VStack(spacing: Constants.bodySpace) {
+            Image(Constants.Image.logoSignColor)
                 .resizable()
-                .frame(maxWidth: LoginConstants.logoWidht, maxHeight: LoginConstants.logoHeight)
+                .frame(maxWidth: Constants.logoWidht, maxHeight: Constants.logoHeight)
                 .aspectRatio(contentMode: .fit)
             
             formStack
@@ -33,17 +33,17 @@ struct LoginView: View {
     }
     
     private var formStack: some View {
-        VStack(spacing: LoginConstants.formStackSpacing) {
+        VStack(spacing: Constants.formStackSpacing) {
             titleStack
             
-            VStack(spacing: LoginConstants.formStackInterSpacing) {
-                CDSTextField(LoginConstants.email, text: $email, type: .email)
-                VStack(spacing: LoginConstants.actionLabelSpacing) {
-                    CDSTextField(LoginConstants.password, text: $password, type: .password)
+            VStack(spacing: Constants.formStackInterSpacing) {
+                CDSTextField(Constants.email, text: $email, type: .email)
+                VStack(spacing: Constants.actionLabelSpacing) {
+                    CDSTextField(Constants.password, text: $password, type: .password)
                     HStack {
                         Spacer()
                         CDSActionLabel(content: [
-                            .button(text: LoginConstants.forgotPassword, action: forgotPasswordAction)
+                            .button(text: Constants.forgotPassword, action: forgotPasswordAction)
                         ])
                     }
                 }
@@ -57,23 +57,23 @@ struct LoginView: View {
     
     private var titleStack: some View {
         HStack {
-            VStack(alignment: .leading, spacing: LoginConstants.titleSpacing) {
-                CDSLabel(style: .primary(LoginConstants.title, type: .largeTitle))
-                CDSLabel(style: .secondary(LoginConstants.subtitle, type: .content))
+            VStack(alignment: .leading, spacing: Constants.titleSpacing) {
+                CDSLabel(style: .primary(Constants.login, type: .largeTitle))
+                CDSLabel(style: .secondary(Constants.subtitle, type: .content))
             }
             Spacer()
         }
     }
     
     private var buttonStack: some View {
-        VStack(spacing: LoginConstants.buttonSpacing) {
-            CDSButton(LoginConstants.title, style: .primary(size: .infinity)) {
+        VStack(spacing: Constants.buttonSpacing) {
+            CDSButton(Constants.login, style: .primary(size: .infinity)) {
                 print("Login")
             }
             
             CDSActionLabel(content: [
-                .text(text: LoginConstants.noAccount),
-                .button(text: LoginConstants.signIn, action: goToSignIn)
+                .text(text: Constants.noAccount),
+                .button(text: Constants.signIn, action: goToSignIn)
             ])
         }
     }
