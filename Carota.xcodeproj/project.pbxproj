@@ -12,6 +12,7 @@
 		B20740BC9DC5116FF3252930 /* Pods_Carota.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6948E8DE836FD00FD585F5 /* Pods_Carota.framework */; };
 		DEE9828A2C87A77400BC0596 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE982892C87A77400BC0596 /* Constants.swift */; };
 		DEE9828F2C87CBC800BC0596 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE9828E2C87CBC800BC0596 /* SigninView.swift */; };
+		DEE982922C87DA1100BC0596 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE982912C87DA1100BC0596 /* HomeView.swift */; };
 		DEEA05032C854C410055BBE1 /* CarotaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEA05022C854C410055BBE1 /* CarotaApp.swift */; };
 		DEEA05052C854C410055BBE1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEA05042C854C410055BBE1 /* LoginView.swift */; };
 		DEEA05072C854C420055BBE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEEA05062C854C420055BBE1 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		DEE982892C87A77400BC0596 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DEE9828B2C87CA1600BC0596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DEE9828E2C87CBC800BC0596 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
+		DEE982912C87DA1100BC0596 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DEEA04FF2C854C410055BBE1 /* Carota.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carota.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEEA05022C854C410055BBE1 /* CarotaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarotaApp.swift; sourceTree = "<group>"; };
 		DEEA05042C854C410055BBE1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				DEE9828E2C87CBC800BC0596 /* SigninView.swift */,
+				DEE982912C87DA1100BC0596 /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 			files = (
 				DEEA05052C854C410055BBE1 /* LoginView.swift in Sources */,
 				DEE9828A2C87A77400BC0596 /* Constants.swift in Sources */,
+				DEE982922C87DA1100BC0596 /* HomeView.swift in Sources */,
 				DEE9828F2C87CBC800BC0596 /* SigninView.swift in Sources */,
 				DEEA05032C854C410055BBE1 /* CarotaApp.swift in Sources */,
 			);

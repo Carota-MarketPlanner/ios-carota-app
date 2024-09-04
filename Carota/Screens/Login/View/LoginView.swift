@@ -13,23 +13,34 @@ struct LoginView: View {
     
     @State var email: String = Constants.empty
     @State var password: String = Constants.empty
+    @State var goToSignInValue: Bool = false
+    @State var goToHome: Bool = false
     
     // MARK: - Views
     
     var body: some View {
-        VStack(spacing: Constants.bodySpace) {
-            Image(Constants.Image.logoSignColor)
-                .resizable()
-                .frame(maxWidth: Constants.logoWidht, maxHeight: Constants.logoHeight)
-                .aspectRatio(contentMode: .fit)
-            
-            formStack
+        NavigationStack {
+            VStack(spacing: Constants.bodySpace) {
+                Image(Constants.Image.logoSignColor)
+                    .resizable()
+                    .frame(maxWidth: Constants.logoWidht, maxHeight: Constants.logoHeight)
+                    .aspectRatio(contentMode: .fit)
+                
+                formStack
+            }
+            .padding(theme.sizes.margin)
+            .background(theme.colors.white.color)
+            .onTapGesture {
+                dismissKeyBoard()
+            }
+            .navigationDestination(isPresented: $goToSignInValue) {
+                SigninView()
+            }
+            .navigationDestination(isPresented: $goToHome) {
+                HomeView()
+            }
         }
-        .padding(theme.sizes.margin)
-        .background(theme.colors.white.color)
-        .onTapGesture {
-            dismissKeyBoard()
-        }
+        .navigationBarBackButtonHidden()
     }
     
     private var formStack: some View {
@@ -68,7 +79,7 @@ struct LoginView: View {
     private var buttonStack: some View {
         VStack(spacing: Constants.buttonSpacing) {
             CDSButton(Constants.login, style: .primary(size: .infinity)) {
-                print("Login")
+                goToHome = true
             }
             
             CDSActionLabel(content: [
@@ -84,7 +95,7 @@ struct LoginView: View {
     }
     
     private func goToSignIn() {
-        print("Cadastre-se")
+        goToSignInValue = true
     }
     
     private func dismissKeyBoard() {

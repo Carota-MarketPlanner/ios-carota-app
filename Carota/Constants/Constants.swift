@@ -17,6 +17,8 @@ struct Constants {
     static var retypePassword = "Repetir Senha"
     static var forgotPassword = "Esqueceu sua senha?"
     static var noAccount = "Não tem uma conta? "
+    static var alreadyRegistered = "Já tem uma conta? "
+    static var doLogin = "Fazer Login"
     static var signIn = "Cadastre-se"
     static var signInSubtitle = "Defina suas credenciais pra continuar"
     

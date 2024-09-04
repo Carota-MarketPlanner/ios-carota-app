@@ -17,7 +17,7 @@ struct CarotaApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SigninView()
+            LoginView()
         }
     }
 }
