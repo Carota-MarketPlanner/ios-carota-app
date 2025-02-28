@@ -18,33 +18,28 @@ struct SigninView: View {
     @State var password: String = Constants.empty
     @State var retypedPassword: String = Constants.empty
     
-    @State var goToLoginAction: Bool = false
-    @State var goToHome: Bool = false
+    private var action: () -> Void
+    
+    init(action: @escaping () -> Void) {
+        self.action = action
+    }
     
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(spacing: Constants.signinBodySpace) {
-                    Image(Constants.Image.logoSignColor)
-                        .resizable()
-                        .frame(maxWidth: Constants.logoWidht, maxHeight: Constants.logoHeight)
-                        .aspectRatio(contentMode: .fit)
-                    
-                    formStack
-                    Spacer()
-                }
-                .padding(theme.sizes.margin)
+        ScrollView {
+            VStack(spacing: Constants.signinBodySpace) {
+                Image(Constants.Image.logoSignColor)
+                    .resizable()
+                    .frame(maxWidth: Constants.logoWidht, maxHeight: Constants.logoHeight)
+                    .aspectRatio(contentMode: .fit)
+                
+                formStack
+                Spacer()
             }
-            .background(theme.colors.white.color)
-            .onTapGesture {
-                dismissKeyBoard()
-            }
-            .navigationDestination(isPresented: $goToLoginAction) {
-                LoginView()
-            }
-            .navigationDestination(isPresented: $goToHome) {
-                HomeView()
-            }
+            .padding(theme.sizes.margin)
+        }
+        .background(theme.colors.white.color)
+        .onTapGesture {
+            dismissKeyBoard()
         }
         .navigationBarBackButtonHidden()
     }
@@ -77,7 +72,7 @@ struct SigninView: View {
     private var buttonStack: some View {
         VStack(spacing: Constants.buttonSpacing) {
             CDSButton(Constants.signIn, style: .primary(size: .infinity)) {
-                goToHome = true
+                action()
             }
             
             CDSActionLabel(content: [
@@ -107,5 +102,5 @@ struct SigninView: View {
 }
 
 #Preview {
-    SigninView()
+    SigninView() {}
 }

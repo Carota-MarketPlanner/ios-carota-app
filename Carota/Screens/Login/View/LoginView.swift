@@ -14,7 +14,14 @@ struct LoginView: View {
     @State var email: String = Constants.empty
     @State var password: String = Constants.empty
     @State var goToSignInValue: Bool = false
-    @State var goToHome: Bool = false
+    
+    private var logger: (Bool) -> Void
+    private var service = LoginServiceConcrete()
+    private var listService = ListsService()
+    
+    init(logger: @escaping (Bool) -> Void) {
+        self.logger = logger
+    }
     
     // MARK: - Views
     
@@ -34,10 +41,10 @@ struct LoginView: View {
                 dismissKeyBoard()
             }
             .navigationDestination(isPresented: $goToSignInValue) {
-                SigninView()
-            }
-            .navigationDestination(isPresented: $goToHome) {
-                HomeView()
+                SigninView() {
+                    goToSignInValue = false
+                    logger(true)
+                }
             }
         }
         .navigationBarBackButtonHidden()
@@ -79,7 +86,8 @@ struct LoginView: View {
     private var buttonStack: some View {
         VStack(spacing: Constants.buttonSpacing) {
             CDSButton(Constants.login, style: .primary(size: .infinity)) {
-                goToHome = true
+                service.testConnection()
+                logger(true)
             }
             
             CDSActionLabel(content: [
@@ -109,5 +117,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView()
+    LoginView() { _ in }
 }

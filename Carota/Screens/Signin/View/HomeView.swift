@@ -10,11 +10,19 @@ import SwiftUI
 struct HomeView: View {
     @Environment(\.dismiss) var dismiss
     
+    private var logger: (Bool) -> Void
+    
+    init(logger: @escaping (Bool) -> Void) {
+        self.logger = logger
+    }
+    
     var body: some View {
         NavigationStack {
-            Text("Hello, World!")
-            Button("Logout") {
-                dismiss()
+            VStack {
+                Text("Hello, World!")
+                Button("Logout") {
+                    logger(false)
+                }
             }
         }
         .navigationBarBackButtonHidden()
@@ -22,5 +30,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView() { _ in }
 }

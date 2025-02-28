@@ -11,13 +11,30 @@ import CDSComponents
 
 @main
 struct CarotaApp: App {
-    init() {
-        CDSThemeCore.setTheme(theme: CDSCarotaTheme())
-    }
+    @State var logged: Bool = false
+    
+    init() { CDSThemeCore.setTheme(theme: CDSCarotaTheme()) }
     
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            withAnimation {
+                getMainView()
+            }
         }
+    }
+    
+    @ViewBuilder
+    func getMainView() -> some View {
+        if logged {
+            HomeView(logger: logger)
+        } else {
+            LoginView(logger: logger)
+        }
+    }
+    
+    func logger(isLogged: Bool) {
+        
+            logged = isLogged
+        
     }
 }

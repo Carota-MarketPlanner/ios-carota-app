@@ -6,7 +6,7 @@ use_frameworks!
 target 'Carota' do
   
   pod 'CarotaTheme', '1.0.4'
-  pod 'CarotaService', '1.1.3'
+  pod 'CarotaService/Source', :path => '/Users/eliasferreira/Developer/carota/ios/ios-carota-service'
   pod 'CDSComponents', '1.0.4'
 
   target 'CarotaTests' do
