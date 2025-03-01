@@ -26,15 +26,9 @@ struct CarotaApp: App {
     @ViewBuilder
     func getMainView() -> some View {
         if logged {
-            HomeView(logger: logger)
+            HomeView(isLogged: $logged)
         } else {
-            LoginView(logger: logger)
+            LoginView(isLogged: $logged)
         }
-    }
-    
-    func logger(isLogged: Bool) {
-        
-            logged = isLogged
-        
     }
 }

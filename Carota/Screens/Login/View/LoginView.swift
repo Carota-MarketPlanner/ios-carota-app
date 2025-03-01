@@ -11,16 +11,12 @@ import CDSComponents
 struct LoginView: View {
     @CDSThemeCore var theme: CDSTheme
     
-    @State var email: String = Constants.empty
-    @State var password: String = Constants.empty
     @State var goToSignInValue: Bool = false
     
-    private var logger: (Bool) -> Void
-    private var service = LoginServiceConcrete()
-    private var listService = ListsService()
+    @ObservedObject var viewModel: LoginViewModel
     
-    init(logger: @escaping (Bool) -> Void) {
-        self.logger = logger
+    init(isLogged: Binding<Bool>) {
+        viewModel = LoginViewModel(isLogged: isLogged)
     }
     
     // MARK: - Views
@@ -43,7 +39,6 @@ struct LoginView: View {
             .navigationDestination(isPresented: $goToSignInValue) {
                 SigninView() {
                     goToSignInValue = false
-                    logger(true)
                 }
             }
         }
@@ -55,9 +50,9 @@ struct LoginView: View {
             titleStack
             
             VStack(spacing: Constants.formStackInterSpacing) {
-                CDSTextField(Constants.email, text: $email, type: .email)
+                CDSTextField(Constants.email, text: $viewModel.email, type: .email)
                 VStack(spacing: Constants.actionLabelSpacing) {
-                    CDSTextField(Constants.password, text: $password, type: .password)
+                    CDSTextField(Constants.password, text: $viewModel.password, type: .password)
                     HStack {
                         Spacer()
                         CDSActionLabel(content: [
@@ -86,8 +81,7 @@ struct LoginView: View {
     private var buttonStack: some View {
         VStack(spacing: Constants.buttonSpacing) {
             CDSButton(Constants.login, style: .primary(size: .infinity)) {
-                service.testConnection()
-                logger(true)
+                viewModel.login()
             }
             
             CDSActionLabel(content: [
@@ -117,5 +111,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView() { _ in }
+//    LoginView() { _ in }
 }

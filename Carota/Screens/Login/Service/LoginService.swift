@@ -7,26 +7,22 @@
 import Foundation
 
 protocol LoginService {
-    func testConnection()
+    func login(body: LoginBody, completion: @escaping (Result<Void, Error>) -> Void)
 }
 
 class LoginServiceConcrete: LoginService {
-    let provider = CloudService()
+    let provider = CloudProvider.shared
     
-    let body = LoginBody(email: "test@market.com", password: "123123")
-    
-    func testConnection() {
+    func login(body: LoginBody, completion: @escaping (Result<Void, Error>) -> Void)  {
         provider.make(
             request: LoginRequest(body: body)
         ) { (response: CAResponse<LoginResponse>) in
             if let error = response.error {
-                print("API ERROR: \(error.localizedDescription)")
-                return
+                completion(.failure(error))
             }
             
             if let object = response.object {
-                print("API RESULT: success!!!")
-                print(object)
+                completion(.success(Void()))
             }
         }
     }

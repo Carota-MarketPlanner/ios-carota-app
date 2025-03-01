@@ -55,4 +55,5 @@ protocol CARequestProvider {
         request: CARequest,
         completion: @escaping (CAResponse<Response>) -> Void
     )
+    func setAuthorization(token: String)
 }

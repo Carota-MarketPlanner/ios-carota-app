@@ -1,5 +1,5 @@
 //
-//  CloudService.swift
+//  CloudProvider.swift
 //  Carota
 //
 //  Created by Elias Ferreira on 27/02/25.
@@ -7,12 +7,19 @@
 
 import CarotaService
 
-public class CloudService: CARequestProvider {
+public class CloudProvider: CARequestProvider {
     private let baseUrl = "https://carota-back-dev.onrender.com"
     private let client = CSCloudClient.shared
+    private var authorization = String()
     
-    func make<Response>(request: CARequest, completion: @escaping (CAResponse<Response>) -> Void) where Response : Decodable {
+    static var shared: CARequestProvider = CloudProvider()
+    
+    func make<Response>(
+        request: CARequest,
+        completion: @escaping (CAResponse<Response>) -> Void
+    ) where Response : Decodable {
         setAuthorizationIfNeeded()
+        
         client.request(
             url: getURL(from: request),
             method: request.method.csMethod,
@@ -33,8 +40,14 @@ public class CloudService: CARequestProvider {
         }
     }
     
+    public func setAuthorization(token: String) {
+        self.authorization = token
+    }
+    
     private func setAuthorizationIfNeeded() {
-        client.setAuthorization(.bearer(token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDA3NjAyNzAsImV4cCI6MTc0MDc2Mzg3MCwic3ViIjoiYzdiNzRkMGMtZWQ0NC00ZDlmLWJmOGYtODRiMzRiMWViZTcxIn0.oCGllxSFV2S7VXpPT64vHPVVJjD2CBd9AVPv-7JU63A"))
+        if !authorization.isEmpty {
+            client.setAuthorization(.bearer(token: authorization))
+        }
     }
     
     private func getURL(from request: CARequest) -> String {

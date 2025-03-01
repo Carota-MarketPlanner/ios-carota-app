@@ -8,7 +8,7 @@
 import Foundation
 
 class ListsService {
-    let provider = CloudService()
+    let provider = CloudProvider.shared
     
     func fetchLists() {
         provider.make(request: ListsRequest()) { (response: CAResponse<[ListsResponse]>) in

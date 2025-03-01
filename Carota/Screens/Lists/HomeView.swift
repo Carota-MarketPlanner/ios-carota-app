@@ -10,19 +10,26 @@ import SwiftUI
 struct HomeView: View {
     @Environment(\.dismiss) var dismiss
     
-    private var logger: (Bool) -> Void
+    private var service = ListsService()
+    @Binding var isLogged: Bool
     
-    init(logger: @escaping (Bool) -> Void) {
-        self.logger = logger
+    init(isLogged: Binding<Bool>) {
+        _isLogged = isLogged
     }
     
     var body: some View {
         NavigationStack {
             VStack {
+                Spacer()
                 Text("Hello, World!")
                 Button("Logout") {
-                    logger(false)
+                    isLogged = false
                 }
+                Spacer()
+                Button("Get Lists") {
+                    service.fetchLists()
+                }
+                Spacer()
             }
         }
         .navigationBarBackButtonHidden()
@@ -30,5 +37,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView() { _ in }
+//    HomeView() { _ in }
 }

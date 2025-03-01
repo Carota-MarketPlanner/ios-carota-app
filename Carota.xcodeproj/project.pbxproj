@@ -11,7 +11,7 @@
 		1558EBB1529158DA500DB76F /* Pods_Carota_CarotaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C740B060CE38BD43AE081A35 /* Pods_Carota_CarotaUITests.framework */; };
 		B20740BC9DC5116FF3252930 /* Pods_Carota.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6948E8DE836FD00FD585F5 /* Pods_Carota.framework */; };
 		DE6B501A2D70F93C002EF7A8 /* CARequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B50192D70F92F002EF7A8 /* CARequestProvider.swift */; };
-		DE6B501C2D7107C9002EF7A8 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B501B2D7107B0002EF7A8 /* CloudService.swift */; };
+		DE6B501C2D7107C9002EF7A8 /* CloudProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B501B2D7107B0002EF7A8 /* CloudProvider.swift */; };
 		DE6B50202D712730002EF7A8 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B501F2D71272C002EF7A8 /* LoginService.swift */; };
 		DE6B50232D721311002EF7A8 /* Dictionary+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B50222D721307002EF7A8 /* Dictionary+Request.swift */; };
 		DE6B50262D721388002EF7A8 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B50252D721384002EF7A8 /* LoginRequest.swift */; };
@@ -19,6 +19,8 @@
 		DE6B502A2D721657002EF7A8 /* LoginBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B50292D721654002EF7A8 /* LoginBody.swift */; };
 		DE6B502C2D7218B4002EF7A8 /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B502B2D7218B0002EF7A8 /* LoginConstants.swift */; };
 		DE6B50302D721ACA002EF7A8 /* ListsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B502F2D721AC6002EF7A8 /* ListsService.swift */; };
+		DE6B50332D728065002EF7A8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B50322D728065002EF7A8 /* LoginViewModel.swift */; };
+		DE6B50362D728087002EF7A8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B50352D728083002EF7A8 /* LoginModel.swift */; };
 		DEE9828A2C87A77400BC0596 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE982892C87A77400BC0596 /* Constants.swift */; };
 		DEE9828F2C87CBC800BC0596 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE9828E2C87CBC800BC0596 /* SigninView.swift */; };
 		DEE982922C87DA1100BC0596 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE982912C87DA1100BC0596 /* HomeView.swift */; };
@@ -58,7 +60,7 @@
 		C740B060CE38BD43AE081A35 /* Pods_Carota_CarotaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carota_CarotaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3035D1AE779F84B82FCBBE /* Pods-CarotaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarotaTests.debug.xcconfig"; path = "Target Support Files/Pods-CarotaTests/Pods-CarotaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE6B50192D70F92F002EF7A8 /* CARequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CARequestProvider.swift; sourceTree = "<group>"; };
-		DE6B501B2D7107B0002EF7A8 /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
+		DE6B501B2D7107B0002EF7A8 /* CloudProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudProvider.swift; sourceTree = "<group>"; };
 		DE6B501F2D71272C002EF7A8 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		DE6B50222D721307002EF7A8 /* Dictionary+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Request.swift"; sourceTree = "<group>"; };
 		DE6B50252D721384002EF7A8 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
@@ -66,6 +68,8 @@
 		DE6B50292D721654002EF7A8 /* LoginBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBody.swift; sourceTree = "<group>"; };
 		DE6B502B2D7218B0002EF7A8 /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
 		DE6B502F2D721AC6002EF7A8 /* ListsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsService.swift; sourceTree = "<group>"; };
+		DE6B50322D728065002EF7A8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		DE6B50352D728083002EF7A8 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		DEE982892C87A77400BC0596 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DEE9828B2C87CA1600BC0596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DEE9828E2C87CBC800BC0596 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
@@ -163,9 +167,11 @@
 		DE456D332C857E81000DE6FC /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				DE6B501D2D712719002EF7A8 /* Service */,
 				DEE982882C87A76300BC0596 /* Constants */,
+				DE6B501D2D712719002EF7A8 /* Service */,
+				DE6B50342D72807C002EF7A8 /* Model */,
 				DEE982872C87A75400BC0596 /* View */,
+				DE6B50312D72804F002EF7A8 /* ViewModel */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -173,7 +179,7 @@
 		DE6B50182D70F91C002EF7A8 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
-				DE6B501B2D7107B0002EF7A8 /* CloudService.swift */,
+				DE6B501B2D7107B0002EF7A8 /* CloudProvider.swift */,
 				DE6B50192D70F92F002EF7A8 /* CARequestProvider.swift */,
 			);
 			path = Providers;
@@ -201,6 +207,7 @@
 		DE6B502D2D721ABB002EF7A8 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
+				DEE982912C87DA1100BC0596 /* HomeView.swift */,
 				DE6B502E2D721AC1002EF7A8 /* Service */,
 			);
 			path = Lists;
@@ -212,6 +219,22 @@
 				DE6B502F2D721AC6002EF7A8 /* ListsService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		DE6B50312D72804F002EF7A8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DE6B50322D728065002EF7A8 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DE6B50342D72807C002EF7A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE6B50352D728083002EF7A8 /* LoginModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DEE982872C87A75400BC0596 /* View */ = {
@@ -242,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				DEE9828E2C87CBC800BC0596 /* SigninView.swift */,
-				DEE982912C87DA1100BC0596 /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,10 +303,10 @@
 			isa = PBXGroup;
 			children = (
 				DEE9828B2C87CA1600BC0596 /* Info.plist */,
-				DE6B50182D70F91C002EF7A8 /* Providers */,
 				DE456D312C857E4C000DE6FC /* App */,
 				DEE982902C87CF6100BC0596 /* Constants */,
 				DE456D302C857E40000DE6FC /* Resources */,
+				DE6B50182D70F91C002EF7A8 /* Providers */,
 				DE6B50212D7212FB002EF7A8 /* Extension */,
 				DE456D322C857E6A000DE6FC /* Screens */,
 				DEEA05082C854C420055BBE1 /* Preview Content */,
@@ -560,11 +582,13 @@
 				DEE9828A2C87A77400BC0596 /* Constants.swift in Sources */,
 				DE6B50302D721ACA002EF7A8 /* ListsService.swift in Sources */,
 				DE6B502C2D7218B4002EF7A8 /* LoginConstants.swift in Sources */,
+				DE6B50362D728087002EF7A8 /* LoginModel.swift in Sources */,
 				DEE982922C87DA1100BC0596 /* HomeView.swift in Sources */,
-				DE6B501C2D7107C9002EF7A8 /* CloudService.swift in Sources */,
+				DE6B501C2D7107C9002EF7A8 /* CloudProvider.swift in Sources */,
 				DE6B502A2D721657002EF7A8 /* LoginBody.swift in Sources */,
 				DEE9828F2C87CBC800BC0596 /* SigninView.swift in Sources */,
 				DEEA05032C854C410055BBE1 /* CarotaApp.swift in Sources */,
+				DE6B50332D728065002EF7A8 /* LoginViewModel.swift in Sources */,
 				DE6B50262D721388002EF7A8 /* LoginRequest.swift in Sources */,
 				DE6B50232D721311002EF7A8 /* Dictionary+Request.swift in Sources */,
 				DE6B50282D72138F002EF7A8 /* LoginResponse.swift in Sources */,
