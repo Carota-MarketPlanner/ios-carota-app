@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05EB7690A2FCA5387191E9AA /* Pods_CarotaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F03584DBBD48CA656F3B1003 /* Pods_CarotaTests.framework */; };
-		1558EBB1529158DA500DB76F /* Pods_Carota_CarotaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C740B060CE38BD43AE081A35 /* Pods_Carota_CarotaUITests.framework */; };
-		B20740BC9DC5116FF3252930 /* Pods_Carota.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6948E8DE836FD00FD585F5 /* Pods_Carota.framework */; };
+		2233F25467062C9DCAD57C16 /* Pods_Carota.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4E645A3AE3D19AF363EB99 /* Pods_Carota.framework */; };
+		5EF6819D1DA5B6BA9DBD6DA5 /* Pods_CarotaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898B6A1ED6C378C98C114EDE /* Pods_CarotaTests.framework */; };
+		66CD71E4895E3A37041EC86B /* Pods_Carota_CarotaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C9885C04C6A8B4AAD806ED /* Pods_Carota_CarotaUITests.framework */; };
 		DE6B501A2D70F93C002EF7A8 /* CARequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B50192D70F92F002EF7A8 /* CARequestProvider.swift */; };
 		DE6B501C2D7107C9002EF7A8 /* CloudProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B501B2D7107B0002EF7A8 /* CloudProvider.swift */; };
 		DE6B50202D712730002EF7A8 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B501F2D71272C002EF7A8 /* LoginService.swift */; };
@@ -51,14 +51,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2B6948E8DE836FD00FD585F5 /* Pods_Carota.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carota.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		43BD6C242852231F5D96EE87 /* Pods-CarotaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarotaTests.release.xcconfig"; path = "Target Support Files/Pods-CarotaTests/Pods-CarotaTests.release.xcconfig"; sourceTree = "<group>"; };
-		545E72CE45875B62E98C7445 /* Pods-Carota.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carota.debug.xcconfig"; path = "Target Support Files/Pods-Carota/Pods-Carota.debug.xcconfig"; sourceTree = "<group>"; };
-		54A94D80F9CF2C913478BF13 /* Pods-Carota-CarotaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carota-CarotaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Carota-CarotaUITests/Pods-Carota-CarotaUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9AEB2C1BC4DCFADFFFE0DE6E /* Pods-Carota-CarotaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carota-CarotaUITests.release.xcconfig"; path = "Target Support Files/Pods-Carota-CarotaUITests/Pods-Carota-CarotaUITests.release.xcconfig"; sourceTree = "<group>"; };
-		A33A55659E2CE652878E589F /* Pods-Carota.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carota.release.xcconfig"; path = "Target Support Files/Pods-Carota/Pods-Carota.release.xcconfig"; sourceTree = "<group>"; };
-		C740B060CE38BD43AE081A35 /* Pods_Carota_CarotaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carota_CarotaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD3035D1AE779F84B82FCBBE /* Pods-CarotaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarotaTests.debug.xcconfig"; path = "Target Support Files/Pods-CarotaTests/Pods-CarotaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5CA41F652242C5D75FAD9D62 /* Pods-Carota.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carota.release.xcconfig"; path = "Target Support Files/Pods-Carota/Pods-Carota.release.xcconfig"; sourceTree = "<group>"; };
+		5FEF836840AB01393527584D /* Pods-CarotaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarotaTests.debug.xcconfig"; path = "Target Support Files/Pods-CarotaTests/Pods-CarotaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		898B6A1ED6C378C98C114EDE /* Pods_CarotaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarotaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90C9885C04C6A8B4AAD806ED /* Pods_Carota_CarotaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carota_CarotaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4E645A3AE3D19AF363EB99 /* Pods_Carota.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carota.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFFA815C06A8DB765769667A /* Pods-CarotaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarotaTests.release.xcconfig"; path = "Target Support Files/Pods-CarotaTests/Pods-CarotaTests.release.xcconfig"; sourceTree = "<group>"; };
+		D7CC5FD6B5397AF1357908D7 /* Pods-Carota-CarotaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carota-CarotaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Carota-CarotaUITests/Pods-Carota-CarotaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE6B50192D70F92F002EF7A8 /* CARequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CARequestProvider.swift; sourceTree = "<group>"; };
 		DE6B501B2D7107B0002EF7A8 /* CloudProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudProvider.swift; sourceTree = "<group>"; };
 		DE6B501F2D71272C002EF7A8 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -84,7 +83,8 @@
 		DEEA05192C854C420055BBE1 /* CarotaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarotaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEEA051D2C854C420055BBE1 /* CarotaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarotaUITests.swift; sourceTree = "<group>"; };
 		DEEA051F2C854C420055BBE1 /* CarotaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarotaUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F03584DBBD48CA656F3B1003 /* Pods_CarotaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarotaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4178F91AAAB78BE1890902F /* Pods-Carota-CarotaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carota-CarotaUITests.release.xcconfig"; path = "Target Support Files/Pods-Carota-CarotaUITests/Pods-Carota-CarotaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F476A72A722910A770EB09FE /* Pods-Carota.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carota.debug.xcconfig"; path = "Target Support Files/Pods-Carota/Pods-Carota.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B20740BC9DC5116FF3252930 /* Pods_Carota.framework in Frameworks */,
+				2233F25467062C9DCAD57C16 /* Pods_Carota.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05EB7690A2FCA5387191E9AA /* Pods_CarotaTests.framework in Frameworks */,
+				5EF6819D1DA5B6BA9DBD6DA5 /* Pods_CarotaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1558EBB1529158DA500DB76F /* Pods_Carota_CarotaUITests.framework in Frameworks */,
+				66CD71E4895E3A37041EC86B /* Pods_Carota_CarotaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,24 +118,14 @@
 		606053B738EFB09723D07D75 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				545E72CE45875B62E98C7445 /* Pods-Carota.debug.xcconfig */,
-				A33A55659E2CE652878E589F /* Pods-Carota.release.xcconfig */,
-				54A94D80F9CF2C913478BF13 /* Pods-Carota-CarotaUITests.debug.xcconfig */,
-				9AEB2C1BC4DCFADFFFE0DE6E /* Pods-Carota-CarotaUITests.release.xcconfig */,
-				DD3035D1AE779F84B82FCBBE /* Pods-CarotaTests.debug.xcconfig */,
-				43BD6C242852231F5D96EE87 /* Pods-CarotaTests.release.xcconfig */,
+				F476A72A722910A770EB09FE /* Pods-Carota.debug.xcconfig */,
+				5CA41F652242C5D75FAD9D62 /* Pods-Carota.release.xcconfig */,
+				D7CC5FD6B5397AF1357908D7 /* Pods-Carota-CarotaUITests.debug.xcconfig */,
+				F4178F91AAAB78BE1890902F /* Pods-Carota-CarotaUITests.release.xcconfig */,
+				5FEF836840AB01393527584D /* Pods-CarotaTests.debug.xcconfig */,
+				BFFA815C06A8DB765769667A /* Pods-CarotaTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		85F69F9305DB668B15396319 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2B6948E8DE836FD00FD585F5 /* Pods_Carota.framework */,
-				C740B060CE38BD43AE081A35 /* Pods_Carota_CarotaUITests.framework */,
-				F03584DBBD48CA656F3B1003 /* Pods_CarotaTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DE456D302C857E40000DE6FC /* Resources */ = {
@@ -285,7 +275,7 @@
 				DEEA051C2C854C420055BBE1 /* CarotaUITests */,
 				DEEA05002C854C410055BBE1 /* Products */,
 				606053B738EFB09723D07D75 /* Pods */,
-				85F69F9305DB668B15396319 /* Frameworks */,
+				E33C16125934A8D2A11A5948 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -339,6 +329,16 @@
 			path = CarotaUITests;
 			sourceTree = "<group>";
 		};
+		E33C16125934A8D2A11A5948 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A4E645A3AE3D19AF363EB99 /* Pods_Carota.framework */,
+				90C9885C04C6A8B4AAD806ED /* Pods_Carota_CarotaUITests.framework */,
+				898B6A1ED6C378C98C114EDE /* Pods_CarotaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,11 +346,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEEA05232C854C420055BBE1 /* Build configuration list for PBXNativeTarget "Carota" */;
 			buildPhases = (
-				88B7E54A0C32CBFFEDE9ADF3 /* [CP] Check Pods Manifest.lock */,
+				517D1DBA5A1466B9B7AE40FF /* [CP] Check Pods Manifest.lock */,
 				DEEA04FB2C854C410055BBE1 /* Sources */,
 				DEEA04FC2C854C410055BBE1 /* Frameworks */,
 				DEEA04FD2C854C410055BBE1 /* Resources */,
-				634C1901F466DB9113CD5E1F /* [CP] Embed Pods Frameworks */,
+				830929EACA8F8E4FA873B543 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -365,7 +365,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEEA05262C854C420055BBE1 /* Build configuration list for PBXNativeTarget "CarotaTests" */;
 			buildPhases = (
-				13340E2E1A2E6959A1FD586A /* [CP] Check Pods Manifest.lock */,
+				2B975751B0C377E7BC89C8D4 /* [CP] Check Pods Manifest.lock */,
 				DEEA050B2C854C420055BBE1 /* Sources */,
 				DEEA050C2C854C420055BBE1 /* Frameworks */,
 				DEEA050D2C854C420055BBE1 /* Resources */,
@@ -384,11 +384,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEEA05292C854C420055BBE1 /* Build configuration list for PBXNativeTarget "CarotaUITests" */;
 			buildPhases = (
-				80D53CFC778FA4A16AEEF631 /* [CP] Check Pods Manifest.lock */,
+				E67D8BDF7BA19DFD6A412C98 /* [CP] Check Pods Manifest.lock */,
 				DEEA05152C854C420055BBE1 /* Sources */,
 				DEEA05162C854C420055BBE1 /* Frameworks */,
 				DEEA05172C854C420055BBE1 /* Resources */,
-				210C309828B6BDBA80933B56 /* [CP] Embed Pods Frameworks */,
+				E87ABFC7EF64DBF73C2307BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -470,7 +470,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13340E2E1A2E6959A1FD586A /* [CP] Check Pods Manifest.lock */ = {
+		2B975751B0C377E7BC89C8D4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -492,24 +492,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		210C309828B6BDBA80933B56 /* [CP] Embed Pods Frameworks */ = {
+		517D1DBA5A1466B9B7AE40FF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Carota-CarotaUITests/Pods-Carota-CarotaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Carota-CarotaUITests/Pods-Carota-CarotaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Carota-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Carota-CarotaUITests/Pods-Carota-CarotaUITests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		634C1901F466DB9113CD5E1F /* [CP] Embed Pods Frameworks */ = {
+		830929EACA8F8E4FA873B543 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -526,7 +531,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Carota/Pods-Carota-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		80D53CFC778FA4A16AEEF631 /* [CP] Check Pods Manifest.lock */ = {
+		E67D8BDF7BA19DFD6A412C98 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -548,26 +553,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		88B7E54A0C32CBFFEDE9ADF3 /* [CP] Check Pods Manifest.lock */ = {
+		E87ABFC7EF64DBF73C2307BD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Carota-CarotaUITests/Pods-Carota-CarotaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Carota-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-Carota-CarotaUITests/Pods-Carota-CarotaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Carota-CarotaUITests/Pods-Carota-CarotaUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -750,7 +750,7 @@
 		};
 		DEEA05242C854C420055BBE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 545E72CE45875B62E98C7445 /* Pods-Carota.debug.xcconfig */;
+			baseConfigurationReference = F476A72A722910A770EB09FE /* Pods-Carota.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -782,7 +782,7 @@
 		};
 		DEEA05252C854C420055BBE1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A33A55659E2CE652878E589F /* Pods-Carota.release.xcconfig */;
+			baseConfigurationReference = 5CA41F652242C5D75FAD9D62 /* Pods-Carota.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -814,7 +814,7 @@
 		};
 		DEEA05272C854C420055BBE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD3035D1AE779F84B82FCBBE /* Pods-CarotaTests.debug.xcconfig */;
+			baseConfigurationReference = 5FEF836840AB01393527584D /* Pods-CarotaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -835,7 +835,7 @@
 		};
 		DEEA05282C854C420055BBE1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43BD6C242852231F5D96EE87 /* Pods-CarotaTests.release.xcconfig */;
+			baseConfigurationReference = BFFA815C06A8DB765769667A /* Pods-CarotaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -856,7 +856,7 @@
 		};
 		DEEA052A2C854C420055BBE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54A94D80F9CF2C913478BF13 /* Pods-Carota-CarotaUITests.debug.xcconfig */;
+			baseConfigurationReference = D7CC5FD6B5397AF1357908D7 /* Pods-Carota-CarotaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -875,7 +875,7 @@
 		};
 		DEEA052B2C854C420055BBE1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AEB2C1BC4DCFADFFFE0DE6E /* Pods-Carota-CarotaUITests.release.xcconfig */;
+			baseConfigurationReference = F4178F91AAAB78BE1890902F /* Pods-Carota-CarotaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

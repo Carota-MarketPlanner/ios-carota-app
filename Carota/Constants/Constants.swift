@@ -38,4 +38,10 @@ struct Constants {
     struct Image {
         static var logoSignColor = "logo.sign.color"
     }
+    
+    struct Network {
+        static var baseURLLocal = "http://localhost:3333"
+        static var baseURLDev = "https://api-dev.carotaapp.com/"
+        static var baseURLProd = "https://api.carotaapp.com"
+    }
 }

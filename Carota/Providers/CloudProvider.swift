@@ -8,7 +8,7 @@
 import CarotaService
 
 public class CloudProvider: CARequestProvider {
-    private let baseUrl = "https://carota-back-dev.onrender.com"
+    private let baseUrl = Constants.Network.baseURLProd
     private let client = CSCloudClient.shared
     private var authorization = String()
     

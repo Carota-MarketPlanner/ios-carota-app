@@ -18,10 +18,11 @@ class LoginServiceConcrete: LoginService {
             request: LoginRequest(body: body)
         ) { (response: CAResponse<LoginResponse>) in
             if let error = response.error {
+                print(error.localizedDescription)
                 completion(.failure(error))
             }
             
-            if let object = response.object {
+            if let _ = response.object {
                 completion(.success(Void()))
             }
         }
