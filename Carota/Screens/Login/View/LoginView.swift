@@ -15,6 +15,15 @@ struct LoginView: View {
     
     @ObservedObject var viewModel: LoginViewModel
     
+    var buttonState: CDSButtonStyle.CDSButtonState {
+        viewModel.isLoading ?
+            .loading : (
+                viewModel.email.isEmpty || viewModel.password.isEmpty ?
+                    .disabled :
+                    .enabled
+        )
+    }
+    
     init(isLogged: Binding<Bool>) {
         viewModel = LoginViewModel(isLogged: isLogged)
     }
@@ -80,7 +89,9 @@ struct LoginView: View {
     
     private var buttonStack: some View {
         VStack(spacing: Constants.buttonSpacing) {
-            CDSButton(Constants.login, style: .primary(size: .infinity)) {
+            CDSButton(Constants.login,
+                      style: .primary(size: .infinity,
+                                      state: buttonState)) {
                 viewModel.login()
             }
             

@@ -41,7 +41,7 @@ struct Constants {
     
     struct Network {
         static var baseURLLocal = "http://localhost:3333"
-        static var baseURLDev = "https://api-dev.carotaapp.com/"
+        static var baseURLDev = "https://api-dev.carotaapp.com"
         static var baseURLProd = "https://api.carotaapp.com"
     }
 }

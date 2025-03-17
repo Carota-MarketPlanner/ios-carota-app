@@ -10,6 +10,7 @@ import SwiftUI
 class LoginViewModel: ObservableObject {
     @Published var email = Constants.empty
     @Published var password = Constants.empty
+    @Published var isLoading: Bool = false
     
     @Binding var isLogged: Bool
     
@@ -21,15 +22,20 @@ class LoginViewModel: ObservableObject {
     }
     
     func login() {
+        isLoading = true
         service.login(
             body: LoginBody(email: email, password: password)
         ) { result in
-            switch result {
-            case .success:
-                self.isLogged = true
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    self.isLogged = true
+                    
+                case .failure:
+                    self.isLogged = false
+                }
                 
-            case .failure:
-                self.isLogged = false
+                self.isLoading = false
             }
         }
     }
