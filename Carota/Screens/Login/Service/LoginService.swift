@@ -7,13 +7,13 @@
 import Foundation
 
 protocol LoginService {
-    func login(body: LoginBody, completion: @escaping (Result<Void, Error>) -> Void)
+    func login(body: LoginBody, completion: @escaping (Result<LoginResponse, Error>) -> Void)
 }
 
 class LoginServiceConcrete: LoginService {
     let provider = CloudProvider.shared
     
-    func login(body: LoginBody, completion: @escaping (Result<Void, Error>) -> Void)  {
+    func login(body: LoginBody, completion: @escaping (Result<LoginResponse, Error>) -> Void)  {
         provider.make(
             request: LoginRequest(body: body)
         ) { (response: CAResponse<LoginResponse>) in
@@ -22,8 +22,8 @@ class LoginServiceConcrete: LoginService {
                 completion(.failure(error))
             }
             
-            if let _ = response.object {
-                completion(.success(Void()))
+            if let loginResponse = response.object {
+                completion(.success(loginResponse))
             }
         }
     }

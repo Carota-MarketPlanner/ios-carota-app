@@ -11,24 +11,49 @@ import CDSComponents
 
 @main
 struct CarotaApp: App {
-    @State var logged: Bool = false
+    @StateObject private var session = SessionManager.shared
     
-    init() { CDSThemeCore.setTheme(theme: CDSCarotaTheme()) }
+    private var isLogged: Bool {
+        session.token != nil
+    }
+    
+    init() {
+        CDSThemeCore.setTheme(theme: CDSCarotaTheme())
+    }
     
     var body: some Scene {
         WindowGroup {
-            withAnimation {
-                getMainView()
+            NavigationStack {
+//                LoginView(isLogged: $isLogged)
+//                    .fullScreenCover(isPresented: .constant(isLogged)) {
+//                        HomeView(isLogged: $isLogged)// Aplica a transição personalizada
+//                    }
+                ZStack {
+                    getMainView()
+                }
+                .animation(.easeInOut(duration: 0.3), value: isLogged)
             }
         }
     }
     
     @ViewBuilder
     func getMainView() -> some View {
-        if logged {
-            HomeView(isLogged: $logged)
+        if isLogged {
+            HomeView()
+                .transition(
+                    .asymmetric(
+                        insertion: .move(edge: .trailing).combined(with: .opacity),
+                        removal: .scale(scale: 1.1).combined(with: .opacity)
+                    )
+                )
         } else {
-            LoginView(isLogged: $logged)
+            LoginView()
+                .transition(
+                    .asymmetric(
+                        insertion: .move(edge: .leading).combined(with: .opacity),
+                        removal: .opacity
+                    )
+                )
         }
     }
 }

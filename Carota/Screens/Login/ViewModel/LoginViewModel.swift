@@ -5,20 +5,17 @@
 //  Created by Elias Ferreira on 28/02/25.
 //
 
-import SwiftUI
+import SwiftUICore
 
 class LoginViewModel: ObservableObject {
     @Published var email = Constants.empty
     @Published var password = Constants.empty
     @Published var isLoading: Bool = false
     
-    @Binding var isLogged: Bool
-    
     let service: LoginService
     
-    init(isLogged: Binding<Bool>) {
+    init() {
         self.service = LoginServiceConcrete()
-        _isLogged = isLogged
     }
     
     func login() {
@@ -28,11 +25,11 @@ class LoginViewModel: ObservableObject {
         ) { result in
             DispatchQueue.main.async {
                 switch result {
-                case .success:
-                    self.isLogged = true
+                case .success(let response):
+                    SessionManager.shared.login(with: response)
                     
                 case .failure:
-                    self.isLogged = false
+                    SessionManager.shared.logout()
                 }
                 
                 self.isLoading = false

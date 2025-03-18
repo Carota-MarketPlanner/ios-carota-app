@@ -31,6 +31,10 @@
 		DEEA05142C854C420055BBE1 /* CarotaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEA05132C854C420055BBE1 /* CarotaTests.swift */; };
 		DEEA051E2C854C420055BBE1 /* CarotaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEA051D2C854C420055BBE1 /* CarotaUITests.swift */; };
 		DEEA05202C854C420055BBE1 /* CarotaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEA051F2C854C420055BBE1 /* CarotaUITestsLaunchTests.swift */; };
+		DEF7028D2D89E461009DEED5 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF7028C2D89E45F009DEED5 /* SessionManager.swift */; };
+		DEF702902D8A106C009DEED5 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF7028F2D8A1065009DEED5 /* KeychainHelper.swift */; };
+		DEF702922D8A10EE009DEED5 /* SessionManager+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF702912D8A10E2009DEED5 /* SessionManager+UserDefaults.swift */; };
+		DEF702942D8A113F009DEED5 /* SessionManager+Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF702932D8A1137009DEED5 /* SessionManager+Keychain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,10 @@
 		DEEA05192C854C420055BBE1 /* CarotaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarotaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEEA051D2C854C420055BBE1 /* CarotaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarotaUITests.swift; sourceTree = "<group>"; };
 		DEEA051F2C854C420055BBE1 /* CarotaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarotaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DEF7028C2D89E45F009DEED5 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		DEF7028F2D8A1065009DEED5 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		DEF702912D8A10E2009DEED5 /* SessionManager+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionManager+UserDefaults.swift"; sourceTree = "<group>"; };
+		DEF702932D8A1137009DEED5 /* SessionManager+Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionManager+Keychain.swift"; sourceTree = "<group>"; };
 		F4178F91AAAB78BE1890902F /* Pods-Carota-CarotaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carota-CarotaUITests.release.xcconfig"; path = "Target Support Files/Pods-Carota-CarotaUITests/Pods-Carota-CarotaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F476A72A722910A770EB09FE /* Pods-Carota.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carota.debug.xcconfig"; path = "Target Support Files/Pods-Carota/Pods-Carota.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,10 +186,10 @@
 		DE6B501D2D712719002EF7A8 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				DE6B50292D721654002EF7A8 /* LoginBody.swift */,
-				DE6B50272D72138B002EF7A8 /* LoginResponse.swift */,
-				DE6B50252D721384002EF7A8 /* LoginRequest.swift */,
 				DE6B501F2D71272C002EF7A8 /* LoginService.swift */,
+				DEF7028A2D89E41E009DEED5 /* Request */,
+				DEF702892D89E419009DEED5 /* Response */,
+				DEF702882D89E413009DEED5 /* Body */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -295,6 +303,7 @@
 				DEE9828B2C87CA1600BC0596 /* Info.plist */,
 				DE456D312C857E4C000DE6FC /* App */,
 				DEE982902C87CF6100BC0596 /* Constants */,
+				DEF7028B2D89E44A009DEED5 /* Session */,
 				DE456D302C857E40000DE6FC /* Resources */,
 				DE6B50182D70F91C002EF7A8 /* Providers */,
 				DE6B50212D7212FB002EF7A8 /* Extension */,
@@ -327,6 +336,49 @@
 				DEEA051F2C854C420055BBE1 /* CarotaUITestsLaunchTests.swift */,
 			);
 			path = CarotaUITests;
+			sourceTree = "<group>";
+		};
+		DEF702882D89E413009DEED5 /* Body */ = {
+			isa = PBXGroup;
+			children = (
+				DE6B50292D721654002EF7A8 /* LoginBody.swift */,
+			);
+			path = Body;
+			sourceTree = "<group>";
+		};
+		DEF702892D89E419009DEED5 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				DE6B50272D72138B002EF7A8 /* LoginResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		DEF7028A2D89E41E009DEED5 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DE6B50252D721384002EF7A8 /* LoginRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DEF7028B2D89E44A009DEED5 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				DEF7028C2D89E45F009DEED5 /* SessionManager.swift */,
+				DEF702932D8A1137009DEED5 /* SessionManager+Keychain.swift */,
+				DEF702912D8A10E2009DEED5 /* SessionManager+UserDefaults.swift */,
+				DEF7028E2D8A1059009DEED5 /* Helper */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		DEF7028E2D8A1059009DEED5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DEF7028F2D8A1065009DEED5 /* KeychainHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		E33C16125934A8D2A11A5948 /* Frameworks */ = {
@@ -577,6 +629,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEF702922D8A10EE009DEED5 /* SessionManager+UserDefaults.swift in Sources */,
 				DE6B501A2D70F93C002EF7A8 /* CARequestProvider.swift in Sources */,
 				DEEA05052C854C410055BBE1 /* LoginView.swift in Sources */,
 				DEE9828A2C87A77400BC0596 /* Constants.swift in Sources */,
@@ -590,9 +643,12 @@
 				DEEA05032C854C410055BBE1 /* CarotaApp.swift in Sources */,
 				DE6B50332D728065002EF7A8 /* LoginViewModel.swift in Sources */,
 				DE6B50262D721388002EF7A8 /* LoginRequest.swift in Sources */,
+				DEF702902D8A106C009DEED5 /* KeychainHelper.swift in Sources */,
 				DE6B50232D721311002EF7A8 /* Dictionary+Request.swift in Sources */,
 				DE6B50282D72138F002EF7A8 /* LoginResponse.swift in Sources */,
 				DE6B50202D712730002EF7A8 /* LoginService.swift in Sources */,
+				DEF702942D8A113F009DEED5 /* SessionManager+Keychain.swift in Sources */,
+				DEF7028D2D89E461009DEED5 /* SessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

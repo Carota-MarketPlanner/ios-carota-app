@@ -24,34 +24,35 @@ struct LoginView: View {
         )
     }
     
-    init(isLogged: Binding<Bool>) {
-        viewModel = LoginViewModel(isLogged: isLogged)
+    init() {
+        viewModel = LoginViewModel()
     }
     
     // MARK: - Views
     
     var body: some View {
-        NavigationStack {
-            VStack(spacing: Constants.bodySpace) {
-                Image(Constants.Image.logoSignColor)
-                    .resizable()
-                    .frame(maxWidth: Constants.logoWidht, maxHeight: Constants.logoHeight)
-                    .aspectRatio(contentMode: .fit)
+        VStack(spacing: Constants.bodySpace) {
+            Image(Constants.Image.logoSignColor)
+                .resizable()
+                .frame(maxWidth: Constants.logoWidht, maxHeight: Constants.logoHeight)
+                .aspectRatio(contentMode: .fit)
+            
+            formStack
+        }
+        .padding(theme.sizes.margin)
+        .background(theme.colors.white.color)
+        .onTapGesture {
+            dismissKeyBoard()
+        }
+        .navigationDestination(isPresented: $goToSignInValue) {
+            SigninView() {
+                goToSignInValue = false
                 
-                formStack
-            }
-            .padding(theme.sizes.margin)
-            .background(theme.colors.white.color)
-            .onTapGesture {
-                dismissKeyBoard()
-            }
-            .navigationDestination(isPresented: $goToSignInValue) {
-                SigninView() {
-                    goToSignInValue = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    
                 }
             }
         }
-        .navigationBarBackButtonHidden()
     }
     
     private var formStack: some View {
