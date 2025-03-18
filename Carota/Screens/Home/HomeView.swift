@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    @Environment(\.dismiss) var dismiss
     
-    private var service = ListsService()
+    private var service = HomeService()
     
     var body: some View {
         VStack {
