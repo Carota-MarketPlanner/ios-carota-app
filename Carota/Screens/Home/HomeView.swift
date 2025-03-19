@@ -8,21 +8,28 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var gotToSettings: Bool = false
     
     private var service = HomeService()
     
     var body: some View {
-        VStack {
-            Spacer()
-            Text("Hello, World!")
-            Button("Logout") {
-                SessionManager.shared.logout()
+        NavigationStack {
+            VStack {
+                Spacer()
+                Text("Hello, World!")
+                Button("Settings") {
+                    gotToSettings = true
+                }
+                Spacer()
+                Button("Logout") {
+                    //                service.fetchLists()
+                    SessionManager.shared.logout()
+                }
+                Spacer()
             }
-            Spacer()
-            Button("Get Lists") {
-                service.fetchLists()
+            .navigationDestination(isPresented: $gotToSettings) {
+                ItemsView()
             }
-            Spacer()
         }
     }
 }

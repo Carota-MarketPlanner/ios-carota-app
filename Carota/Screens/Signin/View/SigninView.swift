@@ -72,7 +72,22 @@ struct SigninView: View {
     private var buttonStack: some View {
         VStack(spacing: Constants.buttonSpacing) {
             CDSButton(Constants.signIn, style: .primary(size: .infinity)) {
-                action()
+                LoginServiceConcrete().login(body: LoginBody(email: "test@carota.com", password: "123123")) { result in
+                    switch result {
+                    case .success(let user):
+                        
+                        action()
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                            SessionManager.shared.login(with: user)
+                        }
+                        
+                    case .failure(let error):
+                        print("Erro ao realizar o login: \(error)")
+                    }
+                    
+                    
+                }
             }
             
             CDSActionLabel(content: [

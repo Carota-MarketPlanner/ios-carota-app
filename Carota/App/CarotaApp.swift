@@ -23,16 +23,10 @@ struct CarotaApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-//                LoginView(isLogged: $isLogged)
-//                    .fullScreenCover(isPresented: .constant(isLogged)) {
-//                        HomeView(isLogged: $isLogged)// Aplica a transição personalizada
-//                    }
-                ZStack {
-                    getMainView()
-                }
-                .animation(.easeInOut(duration: 0.3), value: isLogged)
+            ZStack {
+                getMainView()
             }
+            .animation(.easeInOut(duration: 0.3), value: isLogged)
         }
     }
     
@@ -42,16 +36,17 @@ struct CarotaApp: App {
             HomeView()
                 .transition(
                     .asymmetric(
-                        insertion: .move(edge: .trailing).combined(with: .opacity),
-                        removal: .scale(scale: 1.1).combined(with: .opacity)
+                        insertion: .move(edge: .trailing),
+                        removal: .identity
                     )
                 )
+                
         } else {
             LoginView()
                 .transition(
                     .asymmetric(
-                        insertion: .move(edge: .leading).combined(with: .opacity),
-                        removal: .opacity
+                        insertion: .slide,
+                        removal: .identity
                     )
                 )
         }

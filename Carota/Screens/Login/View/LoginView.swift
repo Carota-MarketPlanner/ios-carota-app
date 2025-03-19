@@ -31,25 +31,23 @@ struct LoginView: View {
     // MARK: - Views
     
     var body: some View {
-        VStack(spacing: Constants.bodySpace) {
-            Image(Constants.Image.logoSignColor)
-                .resizable()
-                .frame(maxWidth: Constants.logoWidht, maxHeight: Constants.logoHeight)
-                .aspectRatio(contentMode: .fit)
-            
-            formStack
-        }
-        .padding(theme.sizes.margin)
-        .background(theme.colors.white.color)
-        .onTapGesture {
-            dismissKeyBoard()
-        }
-        .navigationDestination(isPresented: $goToSignInValue) {
-            SigninView() {
-                goToSignInValue = false
+        NavigationStack {
+            VStack(spacing: Constants.bodySpace) {
+                Image(Constants.Image.logoSignColor)
+                    .resizable()
+                    .frame(maxWidth: Constants.logoWidht, maxHeight: Constants.logoHeight)
+                    .aspectRatio(contentMode: .fit)
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                    
+                formStack
+            }
+            .padding(theme.sizes.margin)
+            .background(theme.colors.white.color)
+            .onTapGesture {
+                dismissKeyBoard()
+            }
+            .navigationDestination(isPresented: $goToSignInValue) {
+                SigninView() {
+                    goToSignInValue = false
                 }
             }
         }
@@ -123,5 +121,5 @@ struct LoginView: View {
 }
 
 #Preview {
-//    LoginView() { _ in }
+    LoginView()
 }
