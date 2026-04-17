@@ -19,9 +19,7 @@ struct CarotaApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ZStack {
-                getMainView()
-            }
+            ZStack { getMainView() }
             .animation(.easeInOut(duration: 0.3), value: session.isLoggedIn)
         }
     }
