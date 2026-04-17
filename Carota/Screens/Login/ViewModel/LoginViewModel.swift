@@ -5,7 +5,7 @@
 //  Created by Elias Ferreira on 28/02/25.
 //
 
-import SwiftUICore
+import SwiftUI
 
 class LoginViewModel: ObservableObject {
     @Published var email = Constants.empty

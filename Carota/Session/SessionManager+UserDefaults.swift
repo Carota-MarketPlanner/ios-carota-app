@@ -8,15 +8,15 @@
 import Foundation
 
 extension SessionManager {
-    internal func saveUserToUserDefaults(_ user: LoginUser) {
+    internal func saveUserToUserDefaults(_ user: User) {
         if let encodedUser = try? JSONEncoder().encode(user) {
             UserDefaults.standard.set(encodedUser, forKey: SessionConstants.UserDefaults.userKey)
         }
     }
     
-    internal func loadUserFromUserDefaults() -> LoginUser? {
+    internal func loadUserFromUserDefaults() -> User? {
         if let savedData = UserDefaults.standard.data(forKey: SessionConstants.UserDefaults.userKey),
-           let decodedUser = try? JSONDecoder().decode(LoginUser.self, from: savedData) {
+           let decodedUser = try? JSONDecoder().decode(User.self, from: savedData) {
             return decodedUser
         }
         return nil

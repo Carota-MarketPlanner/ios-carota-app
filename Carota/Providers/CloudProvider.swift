@@ -8,7 +8,7 @@
 import CarotaService
 
 public class CloudProvider: CARequestProvider {
-    private let baseUrl = Constants.Network.baseURLDev
+    private let baseUrl = Constants.Network.baseURLProd
     private let client = CSCloudClient.shared
     private var authorization = String()
     
@@ -18,7 +18,7 @@ public class CloudProvider: CARequestProvider {
         request: CARequest,
         completion: @escaping (CAResponse<Response>) -> Void
     ) where Response : Decodable {
-        setAuthorizationIfNeeded()
+        addAuthorizationToRequestIfNeeded()
         
         client.request(
             url: getURL(from: request),
@@ -44,7 +44,7 @@ public class CloudProvider: CARequestProvider {
         self.authorization = token
     }
     
-    private func setAuthorizationIfNeeded() {
+    private func addAuthorizationToRequestIfNeeded() {
         if !authorization.isEmpty {
             client.setAuthorization(.bearer(token: authorization))
         }

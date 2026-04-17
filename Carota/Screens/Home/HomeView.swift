@@ -22,7 +22,6 @@ struct HomeView: View {
                 }
                 Spacer()
                 Button("Logout") {
-                    //                service.fetchLists()
                     SessionManager.shared.logout()
                 }
                 Spacer()

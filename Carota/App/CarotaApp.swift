@@ -13,10 +13,6 @@ import CDSComponents
 struct CarotaApp: App {
     @StateObject private var session = SessionManager.shared
     
-    private var isLogged: Bool {
-        session.token != nil
-    }
-    
     init() {
         CDSThemeCore.setTheme(theme: CDSCarotaTheme())
     }
@@ -26,13 +22,13 @@ struct CarotaApp: App {
             ZStack {
                 getMainView()
             }
-            .animation(.easeInOut(duration: 0.3), value: isLogged)
+            .animation(.easeInOut(duration: 0.3), value: session.isLoggedIn)
         }
     }
     
     @ViewBuilder
     func getMainView() -> some View {
-        if isLogged {
+        if session.isLoggedIn {
             HomeView()
                 .transition(
                     .asymmetric(

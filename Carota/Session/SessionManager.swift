@@ -10,7 +10,7 @@ import Combine
 class SessionManager: ObservableObject {
     static let shared = SessionManager()
     
-    @Published var user: LoginUser?
+    @Published var user: User?
     @Published var token: String? {
         didSet {
             saveTokenToKeychain(token)
@@ -22,15 +22,19 @@ class SessionManager: ObservableObject {
         }
     }
     
+    var isLoggedIn: Bool {
+        token != nil
+    }
+    
     private init() {
         loadSession()
     }
 
-    func login(with response: LoginResponse) {
-        self.user = response.user
-        self.token = response.token
-        self.refreshToken = response.refreshToken
-        saveUserToUserDefaults(response.user)
+    func login(with model: LoginModel) {
+        self.user = model.user
+        self.token = model.token
+        self.refreshToken = model.refreshToken
+        saveUserToUserDefaults(model.user)
     }
 
     func logout() {

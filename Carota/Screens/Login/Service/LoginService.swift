@@ -7,13 +7,14 @@
 import Foundation
 
 protocol LoginService {
-    func login(body: LoginBody, completion: @escaping (Result<LoginResponse, Error>) -> Void)
+    var provider: CARequestProvider { get }
+    func login(body: LoginBody, completion: @escaping (Result<LoginModel, Error>) -> Void)
 }
 
 class LoginServiceConcrete: LoginService {
     let provider = CloudProvider.shared
     
-    func login(body: LoginBody, completion: @escaping (Result<LoginResponse, Error>) -> Void)  {
+    func login(body: LoginBody, completion: @escaping (Result<LoginModel, Error>) -> Void)  {
         provider.make(
             request: LoginRequest(body: body)
         ) { (response: CAResponse<LoginResponse>) in
@@ -23,8 +24,20 @@ class LoginServiceConcrete: LoginService {
             }
             
             if let loginResponse = response.object {
-                completion(.success(loginResponse))
+                completion(.success(self.parseLoginResponse(loginResponse)))
             }
         }
+    }
+    
+    private func parseLoginResponse(_ response: LoginResponse) -> LoginModel {
+        return LoginModel(
+            user: User(
+                id: response.user.id,
+                name: response.user.name,
+                email: response.user.email
+            ),
+            token: response.token,
+            refreshToken: response.refreshToken
+        )
     }
 }
