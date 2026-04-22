@@ -9,8 +9,6 @@ import SwiftUI
 import CDSComponents
 
 struct LoginView: View {
-    @CDSThemeCore var theme: CDSTheme
-    
     @State var goToSignInValue: Bool = false
     
     @ObservedObject var viewModel: LoginViewModel
@@ -40,8 +38,8 @@ struct LoginView: View {
                 
                 formStack
             }
-            .padding(theme.sizes.margin)
-            .background(theme.colors.white.color)
+            .padding(CDSSize.margin.size)
+            .background(CDSColor.white.color)
             .onTapGesture {
                 dismissKeyBoard()
             }

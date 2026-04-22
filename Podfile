@@ -3,12 +3,14 @@ source 'https://github.com/Carota-MarketPlanner/Specs.git'
 platform :ios, '15.0'
 use_frameworks!
 
+def common
+  pod 'CarotaService', '1.2.1'
+  pod 'CDSComponents', '1.2.0'
+  pod 'CarotaTheme', '1.2.0'
+end
+
 target 'Carota' do
-  
-#  pod 'CarotaService', '1.2.1'
-  pod 'CarotaService/Source', :path => '/Users/eliasferreira/Developer/carota/ios-carota-service'
-  pod 'CarotaTheme', '1.1.0'
-  pod 'CDSComponents', '1.1.0'
+  common
 
   target 'CarotaTests' do
     inherit! :search_paths
@@ -16,5 +18,4 @@ target 'Carota' do
 
   target 'CarotaUITests' do
   end
-
 end

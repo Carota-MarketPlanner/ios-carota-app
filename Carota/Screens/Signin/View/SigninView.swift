@@ -9,8 +9,6 @@ import SwiftUI
 import CDSComponents
 
 struct SigninView: View {
-    @CDSThemeCore var theme: CDSTheme
-    
     @Environment(\.dismiss) var dismiss
     
     @State var name: String = Constants.empty
@@ -35,9 +33,9 @@ struct SigninView: View {
                 formStack
                 Spacer()
             }
-            .padding(theme.sizes.margin)
+            .padding(CDSSize.margin.size)
         }
-        .background(theme.colors.white.color)
+        .background(CDSColor.white.color)
         .onTapGesture {
             dismissKeyBoard()
         }

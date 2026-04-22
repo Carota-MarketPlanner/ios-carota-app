@@ -5,6 +5,7 @@
 //  Created by Elias Ferreira on 27/02/25.
 //
 
+import Foundation
 import CarotaService
 
 public class CloudProvider: CARequestProvider {
