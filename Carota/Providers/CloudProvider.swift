@@ -6,11 +6,11 @@
 //
 
 import Foundation
-import CarotaService
+import NetCore
 
 public class CloudProvider: CARequestProvider {
     private let baseUrl = Constants.Network.baseURLProd
-    private let client = CSCloudClient.shared
+    private let client = NCClient.shared
     private var authorization = String()
     
     static var shared: CARequestProvider = CloudProvider()
@@ -23,7 +23,7 @@ public class CloudProvider: CARequestProvider {
         
         client.request(
             url: getURL(from: request),
-            method: request.method.csMethod,
+            method: request.method.ncMethod,
             body: getBody(object: request.body)
         ) { response in
             switch response {

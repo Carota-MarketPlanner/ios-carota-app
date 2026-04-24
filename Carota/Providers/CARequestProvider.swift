@@ -5,7 +5,7 @@
 //  Created by Elias Ferreira on 27/02/25.
 //
 
-import CarotaService
+import NetCore
 
 enum CAMethod: String {
     case GET
@@ -13,7 +13,7 @@ enum CAMethod: String {
     case PUT
     case DELETE
     
-    var csMethod: HTTPMethod {
+    var ncMethod: HTTPMethod {
         switch self {
         case .GET:
             return .get

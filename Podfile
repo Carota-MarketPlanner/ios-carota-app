@@ -4,7 +4,7 @@ platform :ios, '15.0'
 use_frameworks!
 
 def common
-  pod 'CarotaService', '1.2.1'
+  pod 'NetCore', '1.3.1'
   pod 'CDSComponents', '1.2.0'
   pod 'CarotaTheme', '1.2.0'
 end
