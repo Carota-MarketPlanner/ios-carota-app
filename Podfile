@@ -5,8 +5,8 @@ use_frameworks!
 
 def common
   pod 'NetCore', '1.3.2'
-  pod 'CDSComponents', '1.3.0-dev'
-  pod 'CarotaTheme', '1.3.0-dev'
+  pod 'CDSComponents', '1.3.0'
+  pod 'CarotaTheme', '1.3.0'
 end
 
 target 'Carota' do
