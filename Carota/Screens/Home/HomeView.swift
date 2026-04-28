@@ -22,7 +22,7 @@ struct HomeView: View {
                 }
                 Spacer()
                 Button("Logout") {
-                    SessionManager.shared.logout()
+                    SessionManager.shared.clear()
                 }
                 Spacer()
             }

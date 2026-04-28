@@ -77,13 +77,12 @@ struct SigninView: View {
                         action()
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                            SessionManager.shared.login(with: user)
+//                            SessionManager.shared.login(with: user)
                         }
                         
                     case .failure(let error):
                         print("Erro ao realizar o login: \(error)")
                     }
-                    
                     
                 }
             }

@@ -20,7 +20,7 @@
 		DE6B502C2D7218B4002EF7A8 /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B502B2D7218B0002EF7A8 /* LoginConstants.swift */; };
 		DE6B50302D721ACA002EF7A8 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B502F2D721AC6002EF7A8 /* HomeService.swift */; };
 		DE6B50332D728065002EF7A8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B50322D728065002EF7A8 /* LoginViewModel.swift */; };
-		DE6B50362D728087002EF7A8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B50352D728083002EF7A8 /* LoginModel.swift */; };
+		DE6B50362D728087002EF7A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B50352D728083002EF7A8 /* User.swift */; };
 		DEE9828A2C87A77400BC0596 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE982892C87A77400BC0596 /* Constants.swift */; };
 		DEE9828F2C87CBC800BC0596 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE9828E2C87CBC800BC0596 /* SigninView.swift */; };
 		DEE982922C87DA1100BC0596 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE982912C87DA1100BC0596 /* HomeView.swift */; };
@@ -74,7 +74,7 @@
 		DE6B502B2D7218B0002EF7A8 /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
 		DE6B502F2D721AC6002EF7A8 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		DE6B50322D728065002EF7A8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		DE6B50352D728083002EF7A8 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		DE6B50352D728083002EF7A8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DEE982892C87A77400BC0596 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DEE9828B2C87CA1600BC0596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DEE9828E2C87CBC800BC0596 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
@@ -235,7 +235,7 @@
 		DE6B50342D72807C002EF7A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DE6B50352D728083002EF7A8 /* LoginModel.swift */,
+				DE6B50352D728083002EF7A8 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -658,7 +658,7 @@
 				DEE9828A2C87A77400BC0596 /* Constants.swift in Sources */,
 				DE6B50302D721ACA002EF7A8 /* HomeService.swift in Sources */,
 				DE6B502C2D7218B4002EF7A8 /* LoginConstants.swift in Sources */,
-				DE6B50362D728087002EF7A8 /* LoginModel.swift in Sources */,
+				DE6B50362D728087002EF7A8 /* User.swift in Sources */,
 				DEE982922C87DA1100BC0596 /* HomeView.swift in Sources */,
 				DE6B501C2D7107C9002EF7A8 /* CloudProvider.swift in Sources */,
 				DE6B502A2D721657002EF7A8 /* LoginBody.swift in Sources */,

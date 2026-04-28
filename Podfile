@@ -4,9 +4,9 @@ platform :ios, '15.0'
 use_frameworks!
 
 def common
-  pod 'NetCore', '1.3.1'
-  pod 'CDSComponents', '1.2.0'
-  pod 'CarotaTheme', '1.2.0'
+  pod 'NetCore', '1.3.2'
+  pod 'CDSComponents', '1.3.0-dev'
+  pod 'CarotaTheme', '1.3.0-dev'
 end
 
 target 'Carota' do

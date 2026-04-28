@@ -15,11 +15,7 @@ struct LoginView: View {
     
     var buttonState: CDSButtonStyle.CDSButtonState {
         viewModel.isLoading ?
-            .loading : (
-                viewModel.email.isEmpty || viewModel.password.isEmpty ?
-                    .disabled :
-                    .enabled
-        )
+            .loading : .enabled
     }
     
     init() {

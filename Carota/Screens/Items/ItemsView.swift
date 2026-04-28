@@ -13,7 +13,7 @@ struct ItemsView: View {
         Text("Items")
         
         Button("Logout") {
-            SessionManager.shared.logout()
+            SessionManager.shared.clear()
         }
     }
 }

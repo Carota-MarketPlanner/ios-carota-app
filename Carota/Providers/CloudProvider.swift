@@ -11,7 +11,11 @@ import NetCore
 public class CloudProvider: CARequestProvider {
     private let baseUrl = Constants.Network.baseURLProd
     private let client = NCClient.shared
-    private var authorization = String()
+    private var authorization = SessionManager.shared.token {
+        didSet {
+            addAuthorizationToRequestIfNeeded()
+        }
+    }
     
     static var shared: CARequestProvider = CloudProvider()
     
@@ -19,36 +23,69 @@ public class CloudProvider: CARequestProvider {
         request: CARequest,
         completion: @escaping (CAResponse<Response>) -> Void
     ) where Response : Decodable {
-        addAuthorizationToRequestIfNeeded()
         
-        client.request(
-            url: getURL(from: request),
-            method: request.method.ncMethod,
-            body: getBody(object: request.body)
-        ) { response in
-            switch response {
-            case .success(let data):
-                do {
-                    let object = try JSONDecoder().decode(Response.self, from: data)
-                    completion(.init(object: object))
-                } catch {
-                    completion(.init(error: error))
+        self.execute(request: request) { (response: CAResponse<Response>) in
+            if let error = response.error {
+                switch error {
+                case .unauthorized: self.refreshToken(request: request, completion: completion)
+                default : completion(response)
                 }
-                
-            case .failure(let error):
-                completion(.init(error: error))
             }
         }
     }
     
-    public func setAuthorization(token: String) {
-        self.authorization = token
+    private func execute<Response>(
+        request: CARequest,
+        with completion: @escaping (CAResponse<Response>) -> Void
+    ) where Response : Decodable {
+        
+        client.request(
+            url: getURL(from: request),
+            method: getMethod(from: request.method),
+            body: getBody(object: request.body)
+        ) { (response: NCClient.NCDecodedResponse<Response>) in
+            switch response {
+            case .success(let object):
+                completion(.init(object: object))
+                
+            case .failure(let error):
+                completion(.init(error: self.getError(from: error)))
+            }
+        }
+    }
+    
+    private func refreshToken<Response>(
+        request: CARequest,
+        completion: @escaping (CAResponse<Response>) -> Void
+    ) where Response : Decodable {
+        let body = HTTPBody.json(object: [
+            Constants.Network.refreshTokenKey: SessionManager.shared.refreshToken
+        ])
+        
+        client.request(
+            url: getURL(from: Constants.Network.Endpoint.refreshToken),
+            method: .post,
+            body: body
+        ) { (response: NCClient.NCDecodedResponse<LoginResponse>) in
+            
+            switch response {
+            case .success(let loginResponse):
+                SessionManager.shared.login(with: loginResponse)
+                self.execute(request: request, with: completion)
+            case .failure(let error):
+                completion(.init(error: self.getError(from: error)))
+                SessionManager.shared.clear()
+            }
+        }
     }
     
     private func addAuthorizationToRequestIfNeeded() {
-        if !authorization.isEmpty {
-            client.setAuthorization(.bearer(token: authorization))
+        guard let auth = authorization, !auth.isEmpty else {
+            client.clearAuthorization()
+            return
         }
+        
+        client.setAuthorization(.bearer(token: auth))
     }
     
     private func getURL(from request: CARequest) -> String {
@@ -56,8 +93,28 @@ public class CloudProvider: CARequestProvider {
         return baseUrl + "/" + request.endpoint + params.toRouteParams()
     }
     
+    private func getURL(from endpoint: String) -> String {
+        return baseUrl + "/" + endpoint
+    }
+    
     private func getBody(object: Encodable?) -> HTTPBody? {
         guard let object else { return nil }
         return .json(object: object)
+    }
+    
+    private func getMethod(from caMethod: CAMethod) -> HTTPMethod {
+        switch caMethod {
+        case .GET: .get
+        case .POST: .post
+        case .PUT: .put
+        case .DELETE: .delete
+        }
+    }
+    
+    private func getError(from error: NCError) -> CAError {
+        switch error {
+        case .unauthorized: .unauthorized
+        default: .apiError
+        }
     }
 }

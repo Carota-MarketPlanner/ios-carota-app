@@ -43,5 +43,10 @@ struct Constants {
         static var baseURLLocal = "http://localhost:3333"
         static var baseURLDev = "https://api-dev.carotaapp.com"
         static var baseURLProd = "https://api.carotaapp.com"
+        static var refreshTokenKey = "refresh_token"
+        
+        struct Endpoint {
+            static var refreshToken = "/user/refreshToken"
+        }
     }
 }
